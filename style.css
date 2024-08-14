@@ -1,0 +1,265 @@
+
+:root 
+{
+    --nfx-red:rgb(193, 17, 25);
+    --nfx-red2:rgb(229, 9, 20);
+    --nfx-accordion : rgb(45, 45, 45);
+    --nfx-accordion-hover : rgb(65, 65, 65);
+    --border-color: rgba(128, 128, 128, 0.7);
+    --Download-img2-div-shadow:rgb(0, 0, 0) 0px 0px 32px 0px;
+    --Download-img2-div-dowlaoding-blue:rgb(0, 113, 235);
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body
+{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(35, 35, 35) !important;
+}
+
+/* navbar */
+
+
+nav div:nth-child(2)
+{
+    display: flex;
+    align-items: center !important;
+}
+
+a svg
+{
+    fill: white;
+}
+
+.nav-item>a
+{
+    border: 1px solid rgba(128, 128, 128, 0.7);
+    border-radius: 5px;
+    background-color: rgba(22, 22, 22, 0.7);
+    width:7.7rem;
+    height: 2.1rem;
+}
+
+.nav-item .dropdown-menu
+{
+    padding: 0;
+}
+
+.dropdown-menu a:target
+{
+    background-color: rgba(0, 140, 255, 0.33);
+}
+
+nav button
+{
+    color: white;
+    background-color: var(--nfx-red2) !important;
+    transition: all 0.5s;
+    width: 4.7rem;
+    height: 2rem;
+}
+
+/* home-section */
+#home-section
+{
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(to top, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.405) 60%, rgba(0, 0, 0, 0.923) 100%),
+                      url(./assets/home.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0;
+}
+
+.home-div
+{
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.home-div h1
+{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.home-div p
+{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* .home-form
+{
+    position: relative;
+} */
+
+.home-form div
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-div h3
+{
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+
+.input-email
+{
+    position: relative;
+    width: 22.5rem !important;
+}
+
+.home-form input
+{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.685);
+    height: 3.5rem;
+    position: relative;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-width: 0.5px;
+    border-color: rgba(255, 255, 255, 0.478);
+    border-style: solid;
+}
+
+.floating-label 
+{
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    font-size: 1rem;
+    cursor: text;
+    color: #8c8c8c;
+    transition: all 0.2s ease-in-out;
+}
+
+#email:focus ~ .floating-label,
+#email:valid ~ .floating-label {
+ font-size: 0.8rem;
+ top: 10%;
+}
+
+.home-div button
+{
+    background-color: var(--nfx-red2);
+    text-wrap: nowrap;
+    height: inherit;
+    width: 13.4rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.home-div button:hover, nav button:hover
+{
+    background-color: var(--nfx-red);
+}
+
+/* Enjoy on your TV  */
+
+section
+{
+    background-color: black;
+    margin-top: 0.5%;
+    color: white;
+    padding: 4.5rem 0;
+}
+
+.body-section>div, #faq>div
+{
+    width: 100%;
+    padding: 0 11rem;
+}
+
+.body-section h2
+{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.body-section p
+{
+    font-weight: 400;
+}
+
+.body-section .sub-section:nth-child(2), #Download .sub-section:nth-child(1), #kids .sub-section:nth-child(1)
+{
+    position: relative;
+    padding: 0 0 0 2%;
+}
+
+.body-section img
+{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.body-section .video-div
+{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+}
+
+.video-div video
+{
+    height: 100%;
+    width: 100%;
+}
+
+#Download .detail-div
+{
+    height: 5.25rem;
+    width: 50%;
+    background-color: black;
+    padding: 2%;
+    border-radius: 1rem;
+    border: solid 1px var(--border-color);
+    position: absolute;
+    display: flex; 
+    top: 75%;
+    left: 27%;
+    z-index: 2;
+}
+
+.detail-div img
+{
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width:992px)
+{
+    .body-section>div
+    {
+        padding: 0 5.5rem;
+    }
+}
